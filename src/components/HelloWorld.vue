@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import viteLogo from '../assets/vite.svg'
 import heroImg from '../assets/hero.png'
 import vueLogo from '../assets/vue.svg'
+import { useCounter } from '../composables/useCounter'
 
-const count = ref(0)
+const { count, incrementCount, decrementCount, clearCount } = useCounter()
 </script>
 
 <template>
@@ -18,7 +18,13 @@ const count = ref(0)
       <h1>Get started</h1>
       <p>Edit <code>src/App.vue</code> and save to test <code>HMR</code></p>
     </div>
-    <button class="counter" @click="count++">Counts is {{ count }}</button>
+    <div>
+      <button class="counter" @click="incrementCount">
+        Counts is {{ count }}
+      </button>
+      <button @click="decrementCount">Decrement</button>
+      <button @click="clearCount">Clear</button>
+    </div>
   </section>
 
   <div class="ticks" />
