@@ -5,6 +5,7 @@ import vueLogo from '../assets/vue.svg'
 import { useCounter } from '../composables/useCounter'
 
 const { count, incrementCount, decrementCount, clearCount } = useCounter()
+const unusedVariable = 42
 </script>
 
 <template>
