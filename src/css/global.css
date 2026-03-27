@@ -50,6 +50,18 @@
   }
 }
 
+#app {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -98,6 +110,7 @@ code {
   background: var(--code-bg);
 }
 
+/* Legacy Vite template (unused by movie routes; kept for reference) */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -154,18 +167,6 @@ code {
     transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
       scale(0.8);
   }
-}
-
-#app {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
 }
 
 #center {
@@ -292,5 +293,41 @@ code {
   &::after {
     right: 0;
     border-right-color: var(--border);
+  }
+}
+
+/* Shared across browse + detail (banners, status, errors) */
+.movie-app__banner {
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  text-align: center;
+  line-height: 150%;
+  font-size: 15px;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+}
+
+.movie-app__banner code {
+  font-size: 0.9em;
+}
+
+.movie-app__status,
+.movie-app__empty {
+  text-align: center;
+  margin: 16px 0 24px;
+  color: var(--text);
+}
+
+.movie-app__error {
+  text-align: center;
+  margin: 16px 0 24px;
+  color: #c2410c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .movie-app__error {
+    color: #fdba74;
   }
 }

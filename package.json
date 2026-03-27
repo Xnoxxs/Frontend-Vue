@@ -13,7 +13,9 @@
     "lint:fix": "eslint . --ext .vue,.js,.ts --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
@@ -22,9 +24,12 @@
     ]
   },
   "dependencies": {
-    "vue": "^3.5.30"
+    "vue": "^3.5.30",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "^10.3.3",
+    "@storybook/vue3-vite": "^10.3.3",
     "@types/node": "^24.12.0",
     "@typescript-eslint/eslint-plugin": "^8.57.1",
     "@typescript-eslint/parser": "^8.57.1",
@@ -39,6 +44,7 @@
     "jsdom": "^27.0.1",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",
+    "storybook": "^10.3.3",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.57.1",
     "vite": "^8.0.0",
