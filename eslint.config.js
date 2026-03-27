@@ -7,12 +7,20 @@ import prettier from 'eslint-plugin-prettier'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default [
+  { ignores: ['dist/**', 'node_modules/**', 'storybook-static/**'] },
   js.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
     files: ['**/*.ts'],
     languageOptions: {
       parser,
+      globals: {
+        fetch: 'readonly',
+        Response: 'readonly',
+        URLSearchParams: 'readonly',
+        window: 'readonly',
+        globalThis: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': pluginTs,
