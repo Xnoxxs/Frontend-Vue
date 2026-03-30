@@ -33,6 +33,14 @@ export default [
     },
   },
   {
+    files: ['playwright.config.ts'],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+      },
+    },
+  },
+  {
     files: ['**/*.vue'],
     languageOptions: {
       parser: vueParser,
