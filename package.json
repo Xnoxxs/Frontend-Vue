@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "e2e": "playwright test",
+    "start": "vite",
     "dev": "vite",
     "test": "vitest",
     "test:run": "vitest run",
