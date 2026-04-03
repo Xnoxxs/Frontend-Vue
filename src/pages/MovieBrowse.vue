@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+
 import '../css/MovieBrowse.css'
 import MovieCard from '../components/MovieCard.vue'
 import { useDebouncedRef } from '../composables/useDebouncedRef'

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
-import MovieCard from './MovieCard.vue'
+import MovieCard from '../components/MovieCard.vue'
 
 const meta = {
   component: MovieCard,

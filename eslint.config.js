@@ -30,6 +30,15 @@ export default [
       'prettier/prettier': 'error',
       '@typescript-eslint/no-unused-vars': 'error',
       'no-unused-vars': 'off',
+      'no-undef': 'off',
+    },
+  },
+  {
+    files: ['playwright.config.ts'],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+      },
     },
   },
   {
@@ -51,6 +60,7 @@ export default [
       'vue/multi-word-component-names': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
       'no-unused-vars': 'off',
+      'no-undef': 'off',
     },
   },
   eslintConfigPrettier,
