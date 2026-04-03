@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import type { Genre, Movie } from '../lib/api_client'
-import MovieBrowse, { type MovieBrowseStorybookDemo } from './MovieBrowse.vue'
+import MovieBrowse, {
+  type MovieBrowseStorybookDemo,
+} from '../pages/MovieBrowse.vue'
 
 const browseGenres: Genre[] = [
   { id: 28, name: 'Action' },
@@ -63,5 +65,14 @@ type Story = StoryObj<typeof meta>
 export const WithDemoData: Story = {
   args: {
     storybookDemo: storybookBrowseDemo,
+  },
+}
+
+export const FilterEmptyState: Story = {
+  args: {
+    storybookDemo: {
+      movies: [],
+      genres: browseGenres,
+    },
   },
 }

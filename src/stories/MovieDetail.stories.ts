@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import type { MovieDetails } from '../lib/api_client'
-import MovieDetail from './MovieDetail.vue'
+import MovieDetail from '../pages/MovieDetail.vue'
 
 const sampleMovieDetails = {
   id: 9901,
